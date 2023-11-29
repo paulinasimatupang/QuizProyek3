@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kasir extends Model
 {
-    use HasFactory;
+    protected $table = "kasirs";
+    protected $fillable = [
+        'kodekasir', 'nama', 'hape'];
 }

@@ -7,4 +7,7 @@
     <li class="nav-item">
         <a class="nav-link {{ Request::is('tambahdatabarang*') ? 'active' : '' }}" href="{{ route('tambahdatabarang') }}">Data Barang</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link {{ Request::is('tambahdatakasir*') ? 'active' : '' }}" href="{{ route('tambahdatakasir') }}">Data Kasir</a>
+    </li>
 </ul>

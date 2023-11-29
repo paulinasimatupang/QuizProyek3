@@ -12,12 +12,14 @@
     <h1 class="text-center mb-4">Edit Data Barang</h1>
 
         <div class="container">
-            
+
             <div class="row justify-content-center">
                 <div class="col-8">
                     <div class="card">
                         <div class="card-body">
-                            <form action="/updatedatabarang/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+                            <form action="/editdatabarang/{{ $data->id }}" method="POST" enctype="multipart/form-data">
+
+
                                 @csrf
                                 <div class="mb-3">
                                     <label for="exampleInputkodebarang" class="form-label">Kode Barang</label>
@@ -33,11 +35,11 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputhargasatuan" class="form-label">Harga Satuan</label>
-                                    <input type="text" name="hargasatuan" class="form-control" id="exampleInputhargasatuan" aria-describedby="emailHelp" value="{{ $data->hargasatuan}}>
+                                    <input type="text" name="hargasatuan" class="form-control" id="exampleInputhargasatuan" aria-describedby="emailHelp" value="{{ $data->hargasatuan}}">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputstok" class="form-label">Stok</label>
-                                    <input type="text" name="stok" class="form-control" id="exampleInputstok" aria-describedby="emailHelp" value="{{ $data->stok }}>
+                                    <input type="text" name="stok" class="form-control" id="exampleInputstok" aria-describedby="emailHelp" value="{{ $data->stok }}">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>

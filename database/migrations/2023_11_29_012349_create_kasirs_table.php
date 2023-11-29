@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('kasirs', function (Blueprint $table) {
             $table->id();
+            $table->string('kodekasir');
+            $table->string('nama');
+            $table->string('hape')->nullable();
             $table->timestamps();
         });
     }

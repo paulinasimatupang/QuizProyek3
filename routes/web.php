@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PujaseraController;
+use App\Http\Controllers\PujasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +20,14 @@ Route::get('/', function () {
 
 
 
-Route::get('/tambahdatabarang', [PujaseraController::class, 'tambahdatabarang'])->name('tambahdatabarang');
-Route::post('/insertdatabarang', [PujaseraController::class, 'insertdatabarang'])->name('insertdatabarang');
-Route::get('/editdatabarang/{id}', [PujaseraController::class, 'editdatabarang'])->name('editdatabarang');
-Route::post('/updatedatabarang/{id}', [PujaseraController::class, 'updatedatabarang'])->name('updatedatabarang');
-Route::get('/deletebarang/{id}', [PujaseraController::class, 'deletebarang'])->name('deletebarang');
+Route::get('/tambahdatabarang', [PujasController::class, 'tambahdatabarang'])->name('tambahdatabarang');
+Route::post('/insertdatabarang', [PujasController::class, 'insertdatabarang'])->name('insertdatabarang');
+// Route::get('/editdatabarang/{id}', [PujasController::class, 'editdatabarang'])->name('editdatabarang');
+// Route::post('/updatedatabarang/{id}', [PujasController::class, 'updatedatabarang'])->name('updatedatabarang');
+Route::get('/deletebarang/{id}', [PujasController::class, 'deletebarang'])->name('deletebarang');
+Route::get('/editdatabarang/{id}', [PujasController::class, 'editdatabarang'])->name('editdatabarang');
+Route::post('/editdatabarang/{id}', [PujasController::class, 'updatedatabarang'])->name('updatedatabarang');
+
+
+Route::get('/tambahdatakasir', [PujasController::class, 'tambahdatakasir'])->name('tambahdatakasir');
+Route::post('/insertdatakasir', [PujasController::class, 'insertdatakasir'])->name('insertdatakasir');
